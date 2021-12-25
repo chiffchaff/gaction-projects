@@ -1,3 +1,15 @@
+conditionalEvents:
+  - condition: scene.slots.status == "FINAL" && session.params.choosenOptions == "dragon"
+    handler:
+      staticPrompt:
+        candidates:
+          - promptResponse:
+              firstSimple:
+                variants:
+                  - speech: The people of Gryffinberg will be awestuck by the beauty and power
+                      of the ancient dragon. Much to your dismay, the townspeople fall into dispute
+                      over who will receive the honour of riding the dragon first. You return home
+                      from your quest without everlasting glory of a dragon.
 slots:
   - name: choosenOptions
     commitBehavior:
