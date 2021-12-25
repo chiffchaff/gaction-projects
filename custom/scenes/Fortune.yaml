@@ -1,0 +1,19 @@
+slots:
+  - name: choosenOptions
+    commitBehavior:
+      writeSessionParam: choosenOption
+    promptSettings:
+      initialPrompt:
+        staticPrompt:
+          candidates:
+            - promptResponse:
+                firstSimple:
+                  variants:
+                    - speech: What do you choose to help you on your
+                suggestions:
+                  - title: Dragon
+                  - title: Translator
+                  - title: Compass
+    required: true
+    type:
+      name: available_options

@@ -1,0 +1,23 @@
+intentEvents: # https://developers.google.com/assistant/actionssdk/reference/rest/Shared.Types/IntentEvent
+  - intent: "yes"
+    transitionToScene: Fortune
+    handler:
+      staticPrompt:
+        candidates:
+          - promptResponse:
+              firstSimple:
+                variants:
+                  - speech: I understand stranger, best of luck on your journey
+  - intent: "no"
+    transitionToScene: actions.scene.END_CONVERSATION
+
+onEnter: # https://youtu.be/V6s5vp4l4WE?t=555
+  staticPrompt:
+    candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+              - speech: "Before you continue, do you want fortune to be told?"
+          suggestions:
+            - title: "Yes"
+            - title: "No"
