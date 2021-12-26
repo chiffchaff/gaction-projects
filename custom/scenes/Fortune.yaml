@@ -1,5 +1,5 @@
 conditionalEvents:
-  - condition: scene.slots.status == "FINAL" && session.params.choosenOptions == "dragon"
+  - condition: scene.slots.status == "FINAL" && session.params.choosenOption == "dragon"
     handler:
       staticPrompt:
         candidates:
@@ -10,7 +10,7 @@ conditionalEvents:
                       of the ancient dragon. Much to your dismay, the townspeople fall into dispute
                       over who will receive the honour of riding the dragon first. You return home
                       from your quest without everlasting glory of a dragon.
-slots:
+slots: # https://developers.google.com/assistant/actionssdk/reference/rest/Shared.Types/Scene?hl=en#Slot
   - name: choosenOptions
     commitBehavior:
       writeSessionParam: choosenOption
